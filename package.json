@@ -1,0 +1,19 @@
+{
+  "name": "botkit-middleware-fbuser",
+  "version": "1.0.0",
+  "description": "Adds a Facebook user_profile object to a Botkit message",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "fb": "^1.1.1",
+    "lodash": "^4.17.4"
+  },
+  "keywords": [
+    "botkit",
+    "facebook"
+  ],
+  "author": "Nathan Zylbersztejn",
+  "license": "MIT"
+}
