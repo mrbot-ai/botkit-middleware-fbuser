@@ -22,7 +22,6 @@ module.exports = function (options) {
             if (!user_data){
                 logConsole('debug', 'No user found in storage. Fetching from Facebook API...')
                 FB.api(message.user, { fields: options.fields}, function (fb_user) {
-                    log(JSON.stringify(message));
                     if (!fb_user){
                         logConsole('error', 'ERROR - No user found for facebook id:'+ message.user);
                         next(new Error('User not found'));
