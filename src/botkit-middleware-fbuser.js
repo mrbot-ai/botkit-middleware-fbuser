@@ -1,4 +1,4 @@
-const FB = require('FB');
+const FB = require('fb');
 const logLevels = ["debug", "info", "warn", "error"];
 
 module.exports = function (options) {
