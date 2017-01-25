@@ -32,11 +32,16 @@ module.exports = function (options) {
                         next(fb_user.error)
                     }
 
-                    else {
-                        fb_user.id = message.user;
-                        storage.users.save(fb_user, function (err) {
+                    else if (storage){
+                        fb_user.messenger_id = message.user;
+                        if (storage){
+                            storage.users.save(fb_user, function (err) {
+                                finalize(fb_user);
+                            });
+                        }else{
                             finalize(fb_user);
-                        });
+                        }
+
                     }
                 });
             }
