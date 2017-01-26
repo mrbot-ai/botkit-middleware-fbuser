@@ -1,6 +1,6 @@
 # Botkit Middleware to populate Facebook Messenger user info to a Botkit message
 ## Installation
-Add github repo url to package.json (npm coming soon)
+Add github repo url to package.json
 
 Example:
 ```js
@@ -8,11 +8,10 @@ Example:
 var fbuser = require('botkit-middleware-fbuser')({
     accessToken:'<fb_access_token>',
     fields: ['first_name', 'last_name', 'locale', 'profile_pic','timezone','gender','is_payment_enabled'],
-    logLevel:'error'
+    logLevel:'error',
+    storage: '<Botkit storage object>'
 });
 
-// will save user info to Botkit storage for later use
-fbuser.setStorage(controller.storage);
 
 controller.middleware.receive.use(fbuser.receive)
 ```
