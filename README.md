@@ -9,6 +9,7 @@ var fbuser = require('botkit-middleware-fbuser')({
     accessToken:'<fb_access_token>',
     fields: ['first_name', 'last_name', 'locale', 'profile_pic','timezone','gender','is_payment_enabled'],
     logLevel:'error',
+    expire: 24 * 60 * 60 * 1000, // refresh profile info every 24 hours
     storage: '<Botkit storage object>'
 });
 
@@ -21,4 +22,4 @@ A message object will have an additional field `user_profile` with the fields re
 
 **Nathan Zylbersztejn**
 
-Github: [@znat](https://github.com/snat)
+Github: [@znat](https://github.com/znat)
